@@ -1,12 +1,12 @@
 CLASS zcl_test DEFINITION
   PUBLIC
-  INHERITING FROM zcl_abapgit_gui_page
+  INHERITING FROM zcl_abapgit_gui_component
   FINAL
   CREATE PUBLIC .
 
   PUBLIC SECTION.
+    INTERFACES zif_abapgit_gui_renderable.
   PROTECTED SECTION.
-    METHODS render_content REDEFINITION.
   PRIVATE SECTION.
 
 ENDCLASS.
@@ -16,6 +16,6 @@ ENDCLASS.
 CLASS zcl_test IMPLEMENTATION.
 
 
-  METHOD render_content.
+  METHOD zif_abapgit_gui_renderable~render.
   ENDMETHOD.
 ENDCLASS.
